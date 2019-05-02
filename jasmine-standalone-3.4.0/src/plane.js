@@ -1,2 +1,2 @@
 
-var Plane = function() {};
+function Plane() {};

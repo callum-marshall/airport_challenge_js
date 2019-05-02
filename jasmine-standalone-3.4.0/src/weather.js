@@ -1,5 +1,7 @@
-var Weather = function() {};
+function Weather() {
+  this.stormChance = Math.random();
+};
 
 Weather.prototype.isStorm = function() {
-  return false
+  return this.stormChance > 0.7;
 };

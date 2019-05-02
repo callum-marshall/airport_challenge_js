@@ -2,11 +2,12 @@
 describe('Airport', function() {
 
   var airport;
+  var plane;
+  var weather;
 
   beforeEach(function() {
     airport = new Airport()
     plane = new Plane()
-    // weather = new Weather()
   });
 
   describe('land', function() {
@@ -22,7 +23,10 @@ describe('Airport', function() {
     });
 
     it('raises error if weather is stormy', function(){
-
+      // spyOn(weather, 'isStorm').and.returnValue(false)
+      // airport.land(plane)
+      spyOn(airport.weather, 'isStorm').and.returnValue(true)
+      expect( function() {airport.takeOff(plane); } ).toThrowError('too stormy to take off')
     });
   });
 });
