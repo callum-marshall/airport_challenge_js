@@ -12,7 +12,6 @@ Airport.prototype.land = function(plane) {
 
 Airport.prototype.takeOff = function(plane) {
   if (this.weather.isStorm()) {
-    console.log(this.weather.isStorm())
     throw new Error('too stormy to take off');
   }
   return plane

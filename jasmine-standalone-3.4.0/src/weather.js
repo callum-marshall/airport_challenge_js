@@ -1,3 +1,4 @@
+
 function Weather() {
   this.stormChance = Math.random();
 };
